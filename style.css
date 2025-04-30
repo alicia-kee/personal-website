@@ -1,3 +1,115 @@
 body{
     background-color: #F9FAF4;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title{
+    color: black;
+    font-size: 48px;
+    font-family: "Outfit", Arial;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/*intro section*/
+.intro-section{
+    background-color: #E9F1DA;
+    padding: 40px; /*might get rid of later*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*items at center of page*/
+}
+
+.intro-line{ /*decorative line*/
+    width: 158px;
+    height: 8px;
+    background-color: #99A091;
+    border-radius: 10px;
+    margin: 10px 0; /*space above and below*/
+}
+
+.my-picture{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover; /*image doesn't get warped*/
+    overflow: hidden; /*excess is hidden*/
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.intro-bio{
+    font-family: "Roboto", Arial;
+    text-align: center;
+    font-size: 23px;
+    margin: 20px;
+    display: flex;
+}
+
+.contact-icons-group{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.square-github,
+.linkedin,
+.email {
+    position: relative; /*each icon is a container (can stack images in it)*/
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: inline-block; /*sit side by side */
+    cursor: pointer;
+}
+
+/*styling image inside each container (when hover, colour should change, which is an image swap)*/
+.square-github img,
+.linkedin img,
+.email img {
+    position: absolute; /*puts both images on top of each other in container*/
+    width: 100%; /*image fills container*/
+    height: 100%;
+    transition: opacity 0.3s ease; /*smooth fade when hover in and out of image*/
+}
+
+/*hide second image by default until hover*/
+/*Note: selector:nth-child(n) selects elements based on their order within a parent*/
+/*.square-github img:nth-child(1) selects first img inside .square-github*/
+.square-github img:nth-child(2),
+.linkedin img:nth-child(2),
+.email img:nth-child(2) {
+    opacity: 0;
+}
+
+/*when hover, switch images*/
+/*when hover, first image fades out*/
+.square-github:hover img:nth-child(1),
+.linkedin:hover img:nth-child(1),
+.email:hover img:nth-child(1) {
+    opacity: 0; 
+}
+/*when hover, second image fades in*/
+.square-github:hover img:nth-child(2),
+.linkedin:hover img:nth-child(2),
+.email:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+/*skills section*/
+.skills-section{
+    background-color: #E9F1DA;
+}
+
+/*footer*/
+.footer{
+    background-color: #CCD3C0;
 }
