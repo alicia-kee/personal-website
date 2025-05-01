@@ -1,5 +1,5 @@
 body{
-    background-color: #F9FAF4;
+    background-color: #E9F1DA;
     margin: 0;
     padding: 0;
 
@@ -9,21 +9,88 @@ body{
 
 .section-title{
     color: black;
-    font-size: 48px;
+    font-size: 44px;
     font-family: "Outfit", Arial;
     font-weight: bold;
     text-align: center;
     padding: 10px;
+    margin: 5px;
 }
+
+/*navigation bar*/
+/* li{
+    list-style-type: none;
+    text-align: center;
+    font-family: "Outfit", Arial;
+    font-weight: bold;
+    color: #6a6d65;
+    font-size: 18px;
+
+    padding: 5px;
+}
+
+li:hover{
+    color: #909588;
+    cursor: pointer;
+} */
+
+/* .navigation-bar-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+} */
+
+.navigation-bar-item{
+    text-align: center;
+    font-family: "Outfit", Arial;
+    font-weight: bold;
+    color: #6a6d65;
+    /* font-size: 18px; */
+    font-size: clamp(14px, 2vw, 18px); /*font-size can shrink (if webpage shrinks or on smaller screen) (14px min, 18px max)*/
+    padding: 5px;
+}
+
+.navigation-bar-item:hover{
+    color: #909588;
+    cursor: pointer;
+}
+
+.navigation-bar{
+    position: sticky; /*stays at same position as you scroll*/
+    top: 20px;
+
+    /* width: 859px; */
+    /* width: 55%; */
+    width: min(90%, 700px); /*width is responsive, makes width the smaller value: 90% of screen size or 700px*/
+    height: auto;
+    padding: 10px;
+    background-color: #CCD3C0;
+    border-radius: 50px;
+    opacity: 80%;
+
+    margin: 0 auto; /* horizontally centers the bar on webpage*/
+    row-gap: 5px; /*gap between rows when text wraps*/ 
+    /* column-gap: 50px; gap between each item in a row */
+    /*gap between each item in a row: */
+    column-gap: clamp(10px, 5vw, 50px); /*dynamic gaps, 10px is minimum, 50px is max*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}   
 
 /*intro section*/
 .intro-section{
-    background-color: #E9F1DA;
-    padding: 40px; /*might get rid of later*/
+    /* background-color: #E9F1DA; */
 
     display: flex;
     flex-direction: column;
     align-items: center; /*items at center of page*/
+    padding-top: 40px;
 }
 
 .intro-line{ /*decorative line*/
@@ -47,9 +114,10 @@ body{
 .intro-bio{
     font-family: "Roboto", Arial;
     text-align: center;
-    font-size: 23px;
+    font-size: 20px;
     margin: 20px;
     display: flex;
+    width: 70%;
 }
 
 .contact-icons-group{
@@ -58,15 +126,16 @@ body{
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .square-github,
 .linkedin,
 .email {
     position: relative; /*each icon is a container (can stack images in it)*/
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
     display: inline-block; /*sit side by side */
     cursor: pointer;
 }
