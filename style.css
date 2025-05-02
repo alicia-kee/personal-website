@@ -18,37 +18,11 @@ body{
 }
 
 /*navigation bar*/
-/* li{
-    list-style-type: none;
-    text-align: center;
-    font-family: "Outfit", Arial;
-    font-weight: bold;
-    color: #6a6d65;
-    font-size: 18px;
-
-    padding: 5px;
-}
-
-li:hover{
-    color: #909588;
-    cursor: pointer;
-} */
-
-/* .navigation-bar-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    flex-wrap: wrap;
-} */
-
 .navigation-bar-item{
     text-align: center;
     font-family: "Outfit", Arial;
     font-weight: bold;
     color: #6a6d65;
-    /* font-size: 18px; */
     font-size: clamp(14px, 2vw, 18px); /*font-size can shrink (if webpage shrinks or on smaller screen) (14px min, 18px max)*/
     padding: 5px;
 }
@@ -62,8 +36,6 @@ li:hover{
     position: sticky; /*stays at same position as you scroll*/
     top: 20px;
 
-    /* width: 859px; */
-    /* width: 55%; */
     width: min(90%, 700px); /*width is responsive, makes width the smaller value: 90% of screen size or 700px*/
     height: auto;
     padding: 10px;
@@ -73,7 +45,6 @@ li:hover{
 
     margin: 0 auto; /* horizontally centers the bar on webpage*/
     row-gap: 5px; /*gap between rows when text wraps*/ 
-    /* column-gap: 50px; gap between each item in a row */
     /*gap between each item in a row: */
     column-gap: clamp(10px, 5vw, 50px); /*dynamic gaps, 10px is minimum, 50px is max*/
 
@@ -99,6 +70,7 @@ li:hover{
     background-color: #99A091;
     border-radius: 10px;
     margin: 10px 0; /*space above and below*/
+    border: none;
 }
 
 .my-picture{
@@ -171,6 +143,70 @@ li:hover{
 .linkedin:hover img:nth-child(2),
 .email:hover img:nth-child(2) {
     opacity: 1;
+}
+
+/*projects section*/
+.projects-section{
+    background-color: #F9FAF4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*items at center of page*/
+    padding-top: 35px;
+}
+
+.projects-line{
+    width: 158px;
+    height: 8px;
+    background-color: #DDAFB2;
+    border-radius: 10px;
+    margin: 10px 0; /*space above and below*/
+    border: none;
+}
+
+.project-cards-holder{
+    margin: 40px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.project-card{
+    width: 325px;
+    height: 381px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 5px 6px rgba(188, 188, 188, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: transform 0.3s ease; /* smooth scaling for hover effect*/
+}
+
+.project-card:hover{
+    transform: scale(1.02); /* grow by 5% */
+}
+
+.project-picture img{
+    width: 257px;
+    height: 129px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FED6D7;
+}
+
+.project-name{
+
+}
+
+.project-description{
+
 }
 
 /*skills section*/
