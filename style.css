@@ -64,7 +64,7 @@ body{
     padding-top: 40px;
 }
 
-.intro-line{ /*decorative line*/
+.intro-line, .skills-line{ /*decorative line*/
     width: 158px;
     height: 8px;
     background-color: #99A091;
@@ -154,7 +154,7 @@ body{
     padding: 45px 10px;
 }
 
-.projects-line{
+.projects-line, .education-line{
     width: 158px;
     height: 8px;
     background-color: #DDAFB2;
@@ -245,7 +245,7 @@ body{
 }
 
 .live-button:hover, .github-button:hover{
-    background-color: #fbeef2;
+    background-color: #FFF5F5;
     color: #fac0c1;
     cursor: pointer;
 }
@@ -257,15 +257,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center; /*items at center of page*/
-}
-
-.skills-line{
-    width: 158px;
-    height: 8px;
-    background-color: #99A091;
-    border-radius: 10px;
-    margin: 10px 0; /*space above and below*/
-    border: none;
 }
 
 .skill-group-holder{
@@ -308,6 +299,46 @@ body{
 .a-skill:hover{
     transform: scale(1.03); /* grow by 2% */
     cursor: default;
+}
+
+/*education section:*/
+.education-section{
+    background-color: #F9FAF4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*items at center of page*/
+    padding: 45px 10px;
+}
+
+.education-info-box{
+    background-color: #FFF5F5;
+    font-family: "Roboto", Arial;
+    border-radius: 40px;
+    padding: 45px;
+    margin: 30px;
+    gap: 5px; /*gap between each line of info*/
+    box-shadow: 0px 5px 6px rgba(188, 188, 188, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: min(75%, 900px); /*width is responsive, makes width the smaller value: 90% of screen size or 700px*/
+}
+
+.degree-name{
+    font-size: clamp(18px, 2vw, 25px); /*font-size can shrink (if webpage shrinks or on smaller screen) (18px min, 25px max)*/
+    font-weight: bold;
+}
+
+.uni-name, .uni-years{
+    font-size: clamp(18px, 2vw, 25px); /*font-size can shrink (if webpage shrinks or on smaller screen) (18px min, 25px max)*/
+}
+
+.uni-list{
+    font-size: clamp(14px, 2vw, 20px); /*font-size can shrink (if webpage shrinks or on smaller screen) (14px min, 20px max)*/
 }
 
 /*footer*/
