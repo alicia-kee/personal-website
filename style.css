@@ -151,7 +151,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center; /*items at center of page*/
-    padding-top: 35px;
+    padding: 45px 10px;
 }
 
 .projects-line{
@@ -215,7 +215,7 @@ body{
     font-size: 18px;
     color: #9BA091;
     text-align: center;
-    padding: 8px;
+    padding: 10px;
 }
 
 .project-buttons-holder{
@@ -253,6 +253,61 @@ body{
 /*skills section*/
 .skills-section{
     background-color: #E9F1DA;
+    padding: 45px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*items at center of page*/
+}
+
+.skills-line{
+    width: 158px;
+    height: 8px;
+    background-color: #99A091;
+    border-radius: 10px;
+    margin: 10px 0; /*space above and below*/
+    border: none;
+}
+
+.skill-group-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 85%;
+    margin: 13px;
+    gap: 8px; /*gap between skill title and list of skills*/
+}
+
+.skill-type-title{
+    color: #9BA091;
+    font-family: "Outfit", Arial;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.skills-list-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.a-skill{
+    background-color: white;
+    color: #DDAFB2;
+    font-family: "Outfit", Arial;
+    font-size: 24px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px 5px 6px rgba(188, 188, 188, 0.5);
+    transition: transform 0.3s ease; /* smooth scaling for hover effect*/
+}
+
+.a-skill:hover{
+    transform: scale(1.03); /* grow by 2% */
+    cursor: default;
 }
 
 /*footer*/
