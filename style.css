@@ -178,18 +178,20 @@ body{
     width: 325px;
     height: 381px;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 50px;
+    padding: 10px;
     box-shadow: 0px 5px 6px rgba(188, 188, 188, 0.5);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center; /*center horizontally (in each row)*/
+    justify-content: space-evenly;
 
     transition: transform 0.3s ease; /* smooth scaling for hover effect*/
 }
 
 .project-card:hover{
-    transform: scale(1.02); /* grow by 5% */
+    transform: scale(1.02); /* grow by 2% */
 }
 
 .project-picture img{
@@ -202,11 +204,50 @@ body{
 }
 
 .project-name{
-
+    font-family: "Outfit", Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #9BA091;
 }
 
 .project-description{
+    font-family: "Roboto", Arial;
+    font-size: 18px;
+    color: #9BA091;
+    text-align: center;
+    padding: 8px;
+}
 
+.project-buttons-holder{
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+}
+
+.live-button, .github-button{
+    background-color: #FED6D7;
+    width: 120px;
+    border-radius: 50px;
+    height: 45px;
+    font-family: "Outfit";
+    font-size: 18px;
+    color: #959691;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7px; /*gap between symbol and word in each button*/
+}
+
+.live-symbol, .github-symbol{
+    width: 20px;
+    height: 20px;
+}
+
+.live-button:hover, .github-button:hover{
+    background-color: #fbeef2;
+    color: #fac0c1;
+    cursor: pointer;
 }
 
 /*skills section*/
