@@ -344,4 +344,12 @@ body{
 /*footer*/
 .footer{
     background-color: #CCD3C0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", Arial;
+    font-size: 18px;
+    color: #9BA091;
 }
