@@ -346,6 +346,10 @@ body{
     font-size: clamp(14px, 2vw, 20px); /*font-size can shrink (if webpage shrinks or on smaller screen) (14px min, 20px max)*/
 }
 
+.uni-list-item{
+    margin-bottom: 8px;
+}
+
 /*footer*/
 .footer{
     background-color: #CCD3C0;
