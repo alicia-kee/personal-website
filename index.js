@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Project links:
+    //crochet store
+    document.getElementById("crochet-store-live").addEventListener("click", function () {
+        window.open("https://alicia-kee.github.io/crochet-store/#/", "_blank");
+    });
+    document.getElementById("crochet-store-github").addEventListener("click", function () {
+        window.open("https://github.com/alicia-kee/crochet-store", "_blank");
+    });
+
     //calculator
     document.getElementById("calculator-live").addEventListener("click", function () {
         window.open("https://alicia-kee.github.io/calculator/", "_blank");
@@ -52,4 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ttt-github").addEventListener("click", function () {
         window.open("https://github.com/alicia-kee/tic-tac-toe", "_blank");
     });
+
+    //footer year:
+    document.getElementById("year").textContent = new Date().getFullYear();
 });

@@ -170,29 +170,29 @@ body{
 
 .project-cards-holder{
     margin: 40px;
-
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 50px;
-
 }
 
 .project-card{
-    width: 325px;
-    height: 381px;
+    width: clamp(180px, 70vw, 1100px);
     background-color: white;
-    border-radius: 50px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 40px;
     box-shadow: 0px 5px 6px rgba(188, 188, 188, 0.5);
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /*center horizontally (in each row)*/
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 40px; /*gap between picture and info*/
+    flex-wrap: wrap;
 
-    transition: transform 0.3s ease; /* smooth scaling for hover effect*/
+    transition: transform 0.3s ease; /*smooth scaling for hover effect*/
 }
 
 .project-card:hover{
@@ -200,27 +200,47 @@ body{
 }
 
 .project-picture img{
-    width: 257px;
-    height: 129px;
-    border-radius: 25px;
+    width: clamp(200px, 30vw, 360px);
+    height: clamp(115px, 20vw, 200px);
+    border-radius: 10px;
     border-style: solid;
     border-width: 5px;
     border-color: #FED6D7;
 }
 
+.project-info-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .project-name{
     font-family: "Outfit", Arial;
-    font-size: 24px;
+    font-size: clamp(16px, 3vw, 24px);
     font-weight: bold;
     color: #9BA091;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.project-tech{
+    font-family: "Roboto", Arial;
+    font-size: clamp(12px, 3vw, 18px);
+    color: #9BA091;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 
 .project-description{
     font-family: "Roboto", Arial;
-    font-size: 18px;
+    font-size: clamp(12px, 3vw, 16px);
     color: #9BA091;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    margin-bottom: 8px;
 }
 
 .project-buttons-holder{
@@ -330,7 +350,7 @@ body{
     align-items: flex-start;
     flex-wrap: wrap;
 
-    width: min(75%, 900px); /*width is responsive, makes width the smaller value: 90% of screen size or 700px*/
+    width: min(75%, 1100px); /*width is responsive, makes width the smaller value: 90% of screen size or 700px*/
 }
 
 .degree-name{
